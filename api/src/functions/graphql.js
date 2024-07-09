@@ -8,6 +8,10 @@ import schemas from 'src/graphql/**/*.{js,ts}'
 import { db } from 'src/lib/db'
 import services from 'src/services/**/*.{js,ts}'
 
+export const config = {
+  maxDuration: 5,
+}
+
 export const handler = createGraphQLHandler({
   schema: makeMergedSchema({
     schemas,
